@@ -9,6 +9,7 @@ $pink: #d82559;
 $green: #56bb64;
 $lightGrey: #ececec;
 $darkGrey: #252424;
+$bodyFontColor: #333;
 
 $containerWidth: 800px;
 
@@ -18,7 +19,7 @@ body {
   background: #fafafa;
   font-family: 'Lato' ,'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6em;
-  color: #333;
+  color: $bodyFontColor;
   margin: 0;
   letter-spacing: .01em;
   position: relative;
@@ -34,17 +35,26 @@ body {
 /* TYPOGRAPHY
 ------------------------- */
 h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-  text-transform: uppercase;
+  text-align: center;  
   font-weight: normal;
 }
 h2 {
   font-size: 1.2em;
+  text-transform: uppercase;
 }
 .subtitle {
   font-size: 1em;
   font-weight: normal;
   text-transform: none;
+}
+.text-green {
+  color: $green;
+}
+.text-pink {
+  color: $pink;
+}
+.text-lighter {
+  color: lighten($bodyFontColor, 40%);
 }
 .button {
   border: none;
@@ -150,6 +160,12 @@ h2 {
 
 /* DECORATIONS
 ------------------------- */
+@mixin circle($size, $color) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $color;
+}
 .waves-purple {
   background: url('../images/waves-pattern-purple.svg') no-repeat center center;
   background-size: cover;
@@ -163,9 +179,31 @@ h2 {
   top: -1px;
 }
 .dot-seperator {
-  width: .8em;
-  height: .8em;
   margin: 0 auto;
-  background: $purple;
-  border-radius: 50%;
+  @include circle(.8em, $purple);
+}
+.circles {
+  text-align: center;
+  .col {
+    float: none;
+    display: inline-block;
+    text-align: center;
+  }
+  &.green {
+    .col {
+      margin-left: -25px;
+    }
+  }
+}
+.big-circle {
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+}
+.circle-pink {
+  @include circle(200px, $pink);
+}
+.circle-green {
+  @include circle(150px, $green);
+  opacity: 0.8;
 }
