@@ -1,0 +1,155 @@
+// bower:scss
+// endbower
+
+/* VARIABLES
+------------------------- */
+$purple: #4353a4;
+$purpleDark: #323e7a;
+$pink: #d82559;
+$green: #56bb64;
+$lightGrey: #ececec;
+$darkGrey: #252424;
+
+$containerWidth: 800px;
+
+/* BASE
+------------------------- */
+body {
+  background: #fafafa;
+  font-family: 'Lato' ,'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+  color: #333;
+  margin: 0;
+  letter-spacing: .01em;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* TYPOGRAPHY
+------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+h2 {
+  font-size: 1.2em;
+}
+.subtitle {
+  font-size: 1em;
+  font-weight: normal;
+  text-transform: none;
+}
+.button {
+  border: none;
+  padding: 1em 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .08em;
+  border-radius: 2em;
+  color: #fff;
+  &.pink {
+    background: $pink;
+  }
+  &.purple {
+    background: $purple;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* LAYOUT
+------------------------- */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.col {
+  float: left;
+}
+.container-wrap-purple {
+  background: $purple;
+}
+.container-wrap-light-grey {
+
+}
+.container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+  position: relative;
+}
+.section {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+/* SECTION SPECIFIC
+------------------------- */
+/* intro */
+.section-intro {
+  background: $purple;
+  padding-top: 10em;
+  padding-bottom: 10em;
+  position: relative;
+  background: url('../images/ample-craft-logo-icon.svg') no-repeat center center;
+  background-size: cover;
+  .ample-craft-logo {
+    max-width: 50%;
+    margin-bottom: 1em;
+  }
+  h1 {
+    color: #fff;
+  }
+  .button {
+    position: fixed;
+    top: 1.5em;
+    right: 1.5em;
+    z-index: 10;
+  }
+}
+.section-intro-cover {
+  background: $purple;
+  height: 4em;
+  width: 100%;
+  border-top: 3px solid $purpleDark;
+}
+/* work */
+.section-work {
+  position: relative;
+  top: -6em;
+  h2 {
+    color: #fff;
+  }
+}
+/* other */
+.section-other-services {
+  ul {
+    list-style: none;    
+    padding-left: 0; 
+  }
+  .col {
+    width: 33.33333%;
+  }
+}
+
+/* DECORATIONS
+------------------------- */
+.waves-purple {
+  background: url('../images/waves-pattern-purple.svg') no-repeat center center;
+  background-size: cover;
+  padding-top: 18%;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  padding-top: 11%;
+  width: 100%;
+  position: relative;
+  top: -1px;
+}
