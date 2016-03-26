@@ -133,13 +133,18 @@ h2 {
 }
 /* work */
 .section-work {
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  margin-top: -3em;
   h2 {
     color: #fff;
-    position: absolute;
-    top: 450px;
-    color: #fff;
-    left: 50%;
-    transform: translateX(-50%);  
+    margin-bottom: 1.5em;
+  }
+  video {
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.3);
   }
 }
 /* other */
@@ -175,8 +180,8 @@ h2 {
   background-size: cover;
   padding-top: 11%;
   width: 100%;
-  position: relative;
-  top: -1px;
+  position: absolute;
+  top: 500px;
 }
 .dot-seperator {
   margin: 0 auto;
