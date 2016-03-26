@@ -21,6 +21,7 @@ body {
   color: #333;
   margin: 0;
   letter-spacing: .01em;
+  position: relative;
 }
 
 .browserupgrade {
@@ -53,6 +54,7 @@ h2 {
   letter-spacing: .08em;
   border-radius: 2em;
   color: #fff;
+  display: inline-block;
   &.pink {
     background: $pink;
   }
@@ -83,7 +85,6 @@ h2 {
 .container {
   max-width: $containerWidth;
   margin: 0 auto;
-  position: relative;
 }
 .section {
   text-align: center;
@@ -122,11 +123,13 @@ h2 {
 }
 /* work */
 .section-work {
-  position: relative;
   h2 {
-    position: relative;
-    top: -15.5em;
-    color: #fff;  
+    color: #fff;
+    position: absolute;
+    top: 450px;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);  
   }
 }
 /* other */
@@ -137,6 +140,11 @@ h2 {
   }
   .col {
     width: 33.33333%;
+  }
+}
+.section-get-started {
+  h2 {
+    color: $purple;
   }
 }
 
@@ -153,4 +161,11 @@ h2 {
   width: 100%;
   position: relative;
   top: -1px;
+}
+.dot-seperator {
+  width: .8em;
+  height: .8em;
+  margin: 0 auto;
+  background: $purple;
+  border-radius: 50%;
 }
