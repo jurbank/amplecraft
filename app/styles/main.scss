@@ -47,6 +47,9 @@ h2 {
   font-weight: normal;
   text-transform: none;
 }
+p {
+  margin-bottom: 1.5em;
+}
 .text-green {
   color: $green;
 }
@@ -90,7 +93,7 @@ h2 {
   background: $purple;
 }
 .container-wrap-light-grey {
-
+ color: #ececec;
 }
 .container {
   max-width: $containerWidth;
@@ -99,6 +102,18 @@ h2 {
 .section {
   text-align: center;
   padding: 2em 1em;
+  p {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+hr {
+  background: $lightGrey;
+  height: 2px;
+  border: none;
+  margin: 0;
+  margin: 1em;
 }
 
 /* SECTION SPECIFIC
@@ -164,8 +179,12 @@ h2 {
   }
 }
 .section-get-started {
+  background: $lightGrey;
+  text-align: center;
+  padding-bottom: 4em;
   h2 {
     color: $purple;
+    margin-top: 0;
   }
 }
 
@@ -192,8 +211,16 @@ h2 {
     top: 480px;
   }
 }
+.waves-grey {
+  background: url('../images/waves-pattern-grey.svg') no-repeat center center;
+  position: absolute;
+  position: relative;
+  background-size: cover;
+  padding-top: 11%;
+  width: 100%;
+}
 .dot-seperator {
-  margin: 0 auto;
+  margin: 3em auto;
   @include circle(.8em, $purple);
 }
 .circles {
