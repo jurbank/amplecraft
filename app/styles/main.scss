@@ -113,7 +113,7 @@ hr {
   height: 2px;
   border: none;
   margin: 0;
-  margin: 1em;
+  margin: 2.5em;
 }
 
 /* SECTION SPECIFIC
@@ -136,11 +136,69 @@ hr {
   h1 {
     color: #fff;
   }
-  .button {
+  .button-group {
     position: fixed;
     top: 1.5em;
-    right: 1.5em;
+    right: .5em;
     z-index: 10;
+    @media (min-width: 500px) {
+      right: 1.5em;
+    }
+    &.active {
+      .button {
+        background: #B31C48;
+        + .button-drawer {
+          width: 285px;
+          @media (min-width: 500px) {
+            width: 315px;
+          }
+        }
+      }
+    }
+    .button {
+      position: relative;
+      z-index: 2;
+      padding: 1em 1.5em;
+      @media (min-width: 500px) {
+          padding: 1em 2em;
+      }
+    }
+    .button-drawer {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 15px;
+      border-radius: 2em;
+      background: $pink;
+      text-align: left;
+      width: 0px;
+      height: 35px;
+      font-size: .8em;
+      overflow: hidden;
+      transition: width .6s ease;
+      a {
+        color: #fff;
+        display: inline-block;
+        padding: 0 .5em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-decoration: none;
+        font-size: .9em;
+        &:first-child {
+          left: 6px;
+          @media (min-width: 500px) {
+            left: 13px;
+          }
+        }
+        &:last-child {
+          left: 96px;
+          @media (min-width: 500px) {
+            left: 107px;
+          }
+        }
+      }
+    }
   }
 }
 .section-intro-cover {
@@ -161,6 +219,7 @@ hr {
   }
   video {
     box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
     max-width: 1200px;
     margin: 0 auto;
     @media (min-width: 500px) {
@@ -169,14 +228,18 @@ hr {
   }
 }
 /* other */
-.section-other-services {
+.section-other-services {  
   ul {
     list-style: none;    
     padding-left: 0; 
+    line-height: 2em;
   }
   .col {
     width: 33.33333%;
   }
+}
+.section-services {
+  padding-bottom: 0;
 }
 .section-get-started {
   background: $lightGrey;
@@ -185,6 +248,16 @@ hr {
   h2 {
     color: $purple;
     margin-top: 0;
+  }
+}
+.footer {
+  background: $lightGrey;
+  .copyright {
+    color: #9E9E9E;
+    font-size: .85em;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 2em;
   }
 }
 
@@ -222,6 +295,10 @@ hr {
 .dot-seperator {
   margin: 3em auto;
   @include circle(.8em, $purple);
+  & ~ .section {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 .circles {
   text-align: center;
@@ -229,6 +306,7 @@ hr {
     float: none;
     display: inline-block;
     text-align: center;
+    margin: 0 5px;
   }
   &.green {
     .col {
