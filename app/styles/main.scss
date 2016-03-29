@@ -24,7 +24,9 @@ body {
   letter-spacing: .01em;
   position: relative;
 }
-
+img {
+  height: 100%; /* IE reset */
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -155,6 +157,7 @@ hr {
     &.active {
       .button {
         background: #B31C48;
+        padding: 1em;
         + .button-drawer {
           width: 285px;
           @media (min-width: 500px) {
@@ -168,6 +171,8 @@ hr {
       z-index: 2;
       padding: 1em 1.5em;
       height: 35px;
+      line-height: 0;
+      transition: all .6s ease;
       @media (min-width: 500px) {
           padding: 1em 2em;
       }
@@ -184,11 +189,10 @@ hr {
       height: 35px;
       font-size: .8em;
       overflow: hidden;
-      transition: width .6s ease;
+      transition: all .6s ease;
       a {
         color: #fff;
         display: inline-block;
-        padding: 0 .5em;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -206,7 +210,7 @@ hr {
         &:last-child {
           left: 96px;
           @media (min-width: 500px) {
-            left: 107px;
+            left: 111px;
           }
         }
       }
