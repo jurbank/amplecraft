@@ -75,10 +75,17 @@ gulp.task('images', () => {
     })))
     .pipe(gulp.dest('dist/images'));
 });
+
 gulp.task('videos', () => {
   return gulp.src('app/videos/**/*')
   .pipe(gulp.dest('dist/videos'));
 });
+
+gulp.task('live', () => {
+  return gulp.src('dist/**/*')
+  .pipe(gulp.dest('./'));
+});
+
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
     .concat('app/fonts/**/*'))
