@@ -263,6 +263,7 @@ hr {
   background: $lightGrey;
   text-align: center;
   padding-bottom: 4em;
+  padding-top: 1em;
   h2 {
     color: $purple;
     margin-top: 0;
@@ -281,12 +282,6 @@ hr {
 
 /* DECORATIONS
 ------------------------- */
-@mixin circle($size, $color) {
-  width: $size;
-  height: $size;
-  border-radius: 50%;
-  background: $color;
-}
 .waves-purple {
   background: url('../images/waves-pattern-purple.svg') no-repeat center center;
   background-size: cover;
@@ -313,6 +308,12 @@ hr {
   top: 2px;
   width: 100%;
 }
+@mixin circle($size, $color) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $color;
+}
 .dot-seperator {
   margin: 3em auto;
   @include circle(.8em, $purple);
@@ -330,8 +331,14 @@ hr {
     margin: 0 5px;
   }
   &.green {
-    .col {
-      margin-left: -25px;
+    .col {      
+      margin: 0 0 -30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @media (min-width: 500px) {
+        margin: 0 0 0 -25px;
+      }
     }
   }
 }
@@ -341,7 +348,11 @@ hr {
   vertical-align: middle;
 }
 .circle-pink {
-  @include circle(200px, $pink);
+  @include circle(150px, $pink);
+  @media (min-width: 720px) {
+    width: 210px;
+    height: 210px;
+  }
 }
 .circle-green {
   @include circle(150px, $green);
