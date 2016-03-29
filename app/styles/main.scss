@@ -59,6 +59,10 @@ p {
 .text-lighter {
   color: lighten($bodyFontColor, 40%);
 }
+.text-contained {
+  max-width: 420px;
+  margin: 0 auto;
+}
 .button {
   border: none;
   padding: 1em 3em;
@@ -101,7 +105,7 @@ p {
 }
 .section {
   text-align: center;
-  padding: 2em 1em;
+  padding: 2em 1.5em;
   p {
     max-width: 450px;
     margin-left: auto;
@@ -121,14 +125,18 @@ hr {
 /* intro */
 .section-intro {
   background: $purple;
-  padding-top: 10em;
-  padding-bottom: 10em;
+  padding-top: 7em;
+  padding-bottom: 4em;
   position: relative;
   background: url('../images/ample-craft-logo-icon.svg') no-repeat center center;
   background-size: cover;
+  @media (min-width: 500px) {
+    padding-top: 10em;
+    padding-bottom: 9em;
+  }
   .ample-craft-logo {    
     margin-bottom: 1em;
-    max-width: 90%;
+    max-width: 85%;
     @media (min-width: 500px) {
       max-width: 50%;
     }
@@ -219,14 +227,17 @@ hr {
   margin-top: -3em;
   h2 {
     color: #fff;
-    margin-bottom: 1.5em;
+    margin: 0 0 1em;    
+    @media (min-width: 500px) {
+      margin: .5em 0 1.5em;
+    }
   }
   video {
     box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 7px;
     max-width: 1200px;
     margin: 0 auto;
     @media (min-width: 500px) {
+      border-radius: 7px;
       width: 90%;
     }
   }
@@ -240,6 +251,9 @@ hr {
   }
   .col {
     width: 33.33333%;
+  }
+  p {
+    margin-bottom: 4em;
   }
 }
 .section-services {
@@ -284,8 +298,10 @@ hr {
   width: 100%;
   position: absolute;
   top: 518px;
+  display: none;
   @media (min-width: 500px) {
-    top: 480px;
+    top: 469px;
+    display: block;
   }
 }
 .waves-grey {
@@ -294,6 +310,7 @@ hr {
   position: relative;
   background-size: cover;
   padding-top: 11%;
+  top: 2px;
   width: 100%;
 }
 .dot-seperator {
