@@ -15,6 +15,9 @@ $containerWidth: 800px;
 
 /* BASE
 ------------------------- */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body {
   background: #fafafa;
   font-family: 'Lato' ,'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -25,7 +28,10 @@ body {
   position: relative;
 }
 img {
-  height: 100%; /* IE reset */
+  height: 100%;
+}
+button:focus {
+  outline: none;
 }
 .browserupgrade {
   margin: 0.2em 0;
