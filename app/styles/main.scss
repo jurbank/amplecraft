@@ -18,6 +18,9 @@ $containerWidth: 800px;
 *, *:before, *:after {
   box-sizing: border-box;
 }
+body, html {
+  height: 100%;
+}
 body {
   background: #fafafa;
   font-family: 'Lato' ,'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -26,6 +29,7 @@ body {
   margin: 0;
   letter-spacing: .01em;
   position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 img {
   height: 100%;
@@ -110,6 +114,10 @@ p {
 .container-wrap-purple {
   background: $purple;
 }
+.container-wrap-pink {
+  background: $pink;
+  height: 100%;
+}
 .container-wrap-light-grey {
  color: #ececec;
 }
@@ -138,15 +146,14 @@ hr {
 ------------------------- */
 /* intro */
 .section-intro {
-  background: $purple;
-  padding-top: 7em;
-  padding-bottom: 4em;
+  // padding-top: 7em;
+  // padding-bottom: 4em;
   position: relative;
-  background: url('../images/ample-craft-logo-icon.svg') no-repeat center center;
+  // background: url('../images/ample-craft-logo-icon.svg') no-repeat center center;
   background-size: cover;
+  padding-top: 40%;
   @media (min-width: 500px) {
-    padding-top: 10em;
-    padding-bottom: 9em;
+    
   }
   .ample-craft-logo {    
     margin-bottom: 1em;
