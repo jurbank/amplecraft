@@ -12,6 +12,7 @@
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel='stylesheet' href='/bower_components/normalize-css/normalize.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
@@ -28,15 +29,67 @@
     <![endif]-->
 
 
-      <div class="section-intro">
-        <img src="images/ample-craft-logo-icon.svg" alt="logo" class="logo">
-        <div class="contact">CONTACT</div>
+    <div class="section-intro">
+      <img src="images/ample-craft-logo-icon.svg" alt="logo" class="logo">
+        <a href="#" class="contact">CONTACT</a>
         <div class="container">
+
+          <svg class="logo-large" version="1.1" id="Layer_1" x="0px" y="0px"
+             width="100%" height="88.4px" viewBox="0 0 76 88.4" style="enable-background:new 0 0 76 88.4;" xml:space="preserve">
+          <style type="text/css">
+            .st0{fill:none;stroke:#C92052;stroke-width:8;stroke-linecap:round;stroke-miterlimit:10;}
+            .st1{fill:#C92052;}
+          </style>
+          <g>
+            <path class="st0" d="M70.1,72.8C63.2,79.1,54,82.9,44,82.9c-21.4,0-38.7-17.3-38.7-38.7S22.6,5.6,44,5.6c9.8,0,18.8,3.7,25.6,9.7"
+              />
+            <g>
+              <path class="st1" d="M68.1,77.3c-3,0-12.9,6.1-14,3.1L27.9,12c-1.4-3.9,11-8.3,14.9-9.8c3.9-1.4,8.2,0.5,9.6,4.4L74,65.2
+                c2.6,5.7,0.9,10-3,11.5C70.2,77,68.9,77.3,68.1,77.3z"/>
+            </g>
+            <g>
+              <path class="st1" d="M52.9,45.2H9.3c-4.1,0-5.1-5.4-5.1-9.5s1-7.5,5.1-7.5H53c4.1,0,7.5,3.4,7.5,7.5S57.1,45.2,52.9,45.2z"/>
+            </g>
+          </g>
+          </svg>
+
           <h1><strong>We’re Ample Craft.</strong> A small web design agency dedicated to helping small businesses build elegant, cross-device experiences.</h1>
 
 <!--           <a href="mailto:jurbank@gmail.com?subject=Hey%20John,%20Help%20me%20build%20an awesome website.&amp;body=(Answering%20these%20questions%20will%20help%20us%20both%20determine%20if%20we're%20a%20great%20fit%20to%20work%20together).%0A%0A%0AHere's%20some%20info%20about%20me%20(company,%20name,%20title,%20phone%20number,%20etc.):%0A%0A%0A%0AHere's%20some%20info%20about%20my%20project%20(size%20of%20the%20project,%20technologies%20involved%20if%20you're%20not%20using%20Webflow,%20etc.):%0A%0A%0A%0AHere's%20some%20info%20about%20my%20timeline%20(start%20date,%20end%20date):%0A%0A%0A%0AHere's%20some%20info%20about%20my%20budget%20(greater%20than%20$10,000,%20between%20$5,000%20and%20$10,000,%20between%20$1,500%20and%20$5,000,%20less%20than%20$1,000):%0A%0A%0A%0A%0ALet's%20work%20together!%0A%0A%0A%0ASincerely,%0A%0A%0A%0A" class="button purple">Contact</a> -->
           </div>
-        </div>    
+
+          <svg class="waves-top">
+            <defs>
+              <pattern id="basicPattern" viewBox="0 0 200 1" x="0" y="0" width="380" height="115" patternUnits="userSpaceOnUse">
+                <path d="M302.8,17.7c-50.4,0-59-17.7-100.9-17.7v0c-42.5,0-50.5,17.7-100.9,17.7S41.9,0,0,0v22.8h201.9h201.8V0
+      C361.2,0,353.2,17.7,302.8,17.7z" fill="#ffffff"/>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100" fill="url(#basicPattern)"></rect>
+        </svg>
+      </div>    
+
+
+      <div class="section-case-study">
+        <div class="container-large">
+          <h2>WORK</h2>
+          <div class="row">
+            <video class="video" preload="auto" poster="images/work-mwcm-banner.png" autoplay="autoplay" loop="loop" muted="true" width="100%">
+              <source src="videos/work-mwcm.mp4" type="video/mp4">
+              <source src="videos/work-mwcm.webm" type="video/webm">
+              <source src="videos/work-mwcm.ogv" type="video/ogg">
+            </video>
+            <!-- <img src="http://placehold.it/600x300" alt="" class="video"> -->
+            <div class="content">
+              <h3>LATEST PROJECT</h3>
+              <p class="title">ONLINE MORTGAGE CALCULATOR</p>
+              <p>Rather than manually recalculating each payment, we where interested in the idea of building a tool that gave the user the flexibility to explore their payment options by simply moving around the sliders to adjust the pricing in real time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
 
 
@@ -54,48 +107,10 @@
         </div>
       </div>
 
-      <div class="container">
-        <div class="section section-services">
-          <h2>Services</h2>
-          <p class="subtitle">We specialize in making websites with Webflow. This allows us to design and develop sites simultanously, making the creative process much faster and more fluid.</p>
-          <div class="dot-seperator"></div>
-          <h3 class="text-pink">The traditional approach</h3>          
-          <div class="row circles">
-            <div class="col">
-              <div class="big-circle circle-pink"><span>design</span></div>
-            </div>
-            <div class="col">
-              <div class="big-circle circle-pink"><span>development</span></div>
-            </div>
-            <div class="col">
-              <div class="big-circle circle-pink"><span>maintenance</span></div>
-            </div>
-          </div>
-          <p class="text-lighter">Instead of segmenting design, development and everything post launch...</p>
-          <hr>
-          <h3 class="text-green">The Webflow approach </h3>
-          <div class="row circles green">
-            <div class="col">
-              <div class="big-circle circle-green"><span>design</span></div>
-            </div>
-            <div class="col">
-              <div class="big-circle circle-green"><span>development</span></div>
-            </div>
-            <div class="col">
-              <div class="big-circle circle-green"><span>maintenance</span></div>
-            </div>
-          </div>
-          <p class="text-lighter">We design with tools that translate our designs, into clean coded sites. Designed, developed and maintained all within the same intuative platfrom.</p>
-        </div>
-        <div class="dot-seperator"></div>
-        <div class="section section-other-services">
-          <p class="subtitle">Not looking for a Webflow project? No worries, we’ve got you covered. We've also built Wordpress sites, web applications, and ecommerce platforms.</p>
-        </div>
-      </div> -->
 
-<!--       <footer class="footer">
+      <footer class="footer">
         <p class="copyright">&copy;2016 Ample Craft.</p>
-      </footer> -->
+      </footer>
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       
 <!--       <script>
