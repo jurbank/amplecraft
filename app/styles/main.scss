@@ -89,7 +89,8 @@ a {
   transition: all $transitionSpeed ease;
   &:hover {
     color: darken($bodyLinkColor, 10%);
-  }  
+    cursor: pointer;
+  }
 }
 @mixin button($color) {
   border: none;
@@ -408,5 +409,7 @@ a {
 
 
 
+/* OTHER TEMPLATES
+------------------------- */
 
 
