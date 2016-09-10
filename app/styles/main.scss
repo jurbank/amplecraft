@@ -28,6 +28,7 @@ $containerWidth: 710px;
 }
 body, html {
   height: 100%;
+  overflow: hidden;
 }
 body {
   background: $pink;
@@ -317,16 +318,24 @@ a {
 
 .container {
   position: relative;
-  max-width: none;
+  max-width: 650px;
 }
 
-.logo-bg-top  {
-  z-index: 9999;
+#scene {
+  margin: 0 auto;
+  padding: 0;
+  li {
+    list-style: none;
+  }
 }
+
 .logo-bg {
   text-align: center;
   position: relative;
   z-index: 999;
+  width: 140%;
+  line-height: 0;
+    border: 130px solid #d82559;
   svg {
     width: 100%;
     height: 100%;
@@ -355,6 +364,85 @@ a {
     }
   }
 }
+
+
+
+#ink {
+  width: 1000px;
+  height: 1000px;
+  // position: absolute;
+  margin: 0 auto;
+  padding: 0px;
+  // transform: translate(-50%, -50%);
+  canvas {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+  }
+}
+
+.layer-1 {
+  z-index: 1;
+  // border: 1px solid #f00;
+}
+.layer-2 {
+  z-index: 2;
+  // border: 1px solid #0f0;
+}
+.layer-3 {
+  z-index: 3;
+  // border: 1px solid #0f0;
+}
+
+
+
+.page-container {
+  height: 100%;
+}
+.left-section,
+.right-section {
+  float: left;
+  height: 100%;
+}
+.left-section {
+  width: 60%;
+  // background: #00f;
+}
+
+.right-section {
+  width: 40%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
