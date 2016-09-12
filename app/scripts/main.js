@@ -249,15 +249,15 @@ var ChineseInk = function(engine) {
 
   var BG_COLOR = '#d82559'
   var COLORS = [
-    '#fff',
-    '#fff',
-    '#fff ',
-    '#fff',
-    '#fff'
+    // '#FFFF57',
+    '#b71e4a'
+    // '#55c0a5 '
+    // '#fff',
+    // '#fff'
   ];
   // ideal to fine tune your brush!
   var PARAMETERS = {
-    squareSize  : 10
+    squareSize  : 1
   };
 var FLUIDMAP = [];
 var PARTICLES = [];
@@ -434,7 +434,7 @@ var HEIGHT = this.engine.height / 20 | 0;
     ctx.strokeStyle = '#594F4F';
 
     ctx.fillStyle = '#594F4F';
-    ctx.globalAlpha = .4;
+    ctx.globalAlpha = .5;
     for (var i = 0; i < PARTICLES.length; ++i) {
       var p = PARTICLES[i];
       ctx.fillStyle = p.c;
