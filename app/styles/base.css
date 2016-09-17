@@ -1,0 +1,40 @@
+
+/* BASICS.CSS
+/* --------------------------------------- */
+
+html {
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+.z1 { z-index: 1 }
+.z2 { z-index: 2 }
+.z3 { z-index: 3 }
+.z4 { z-index: 4 }
+.z5 { z-index: 5 }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media (min-width: 36rem) {
+  div[class*="columns-"] {
+    float: left;
+  }  
+  .columns-6 {
+    width: 50%;
+  }
+  .columns-4 {
+    width: 33.333333%;
+  }
+  .columns-2 {
+    width: 25%;
+  }  
+}
+
+
+
