@@ -60,11 +60,13 @@ $('.slider').slick({
 
 $(window).load(function() {
   equalheight('.equalize');
+  equalheight('.equalize-2');
 });
 
 
 $(window).resize(function(){
   equalheight('.equalize');
+  equalheight('.equalize-2');
 });
 
 

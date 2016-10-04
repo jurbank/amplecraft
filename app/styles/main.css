@@ -102,12 +102,15 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.3em;  
 }
 .container.small {
   max-width: 600px;
+}
+.container.large {
+  max-width: 1200px;
 }
 .container .container {
   padding: 0;
@@ -139,6 +142,9 @@ section {
   .columns-4 {
     width: 33.333333%;
   }
+  .columns-3 {
+    width: 25%;
+  }    
   .columns-2 {
     width: 25%;
   }  
@@ -238,9 +244,6 @@ h2 {
 
 
 /* header */
-#header {
-  
-}
 .logo-icon {
   text-align: center;
   margin-top: 50px;
@@ -440,6 +443,23 @@ h2 {
 }
 
 
+
+/* SERVICES PAGE
+------------------------- */
+.services-section div[class*="columns-"] {
+  padding: 0 1.2%;
+}
+
+@media (max-width: 950px) {
+  .services-section div[class*="columns-"] {
+    width: 50%;
+  }
+}
+@media (max-width: 36rem) {
+  .services-section div[class*="columns-"] {
+    width: 100%;
+  }
+}
 /* FEATURE MODULES
 ------------------------- */
 .feature-module {
@@ -466,7 +486,7 @@ h2 {
 }
 
 .feature-module-top {
-  padding: 1.5em;
+  padding: 1.2em;
 }
 .feature-module-top p:last-child {
   margin-bottom: 0;
@@ -482,7 +502,7 @@ h2 {
 .feature-module-bottom {
   background: #666;
   color: #fff;
-  padding: 1.5em;
+  padding: 1.2em;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   position: relative;
