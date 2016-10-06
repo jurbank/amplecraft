@@ -152,7 +152,17 @@ gulp.task('wiredep', () => {
 });
 
 
-
+var extender = require('gulp-html-extend')
+ 
+gulp.task('extend', function () {
+    gulp.src('app/layout/**/*.html')
+        .pipe(extender({annotations:true,verbose:false})) // default options 
+        .pipe(gulp.dest('app'))
+ 
+})
+gulp.task('watch', function () {
+    gulp.watch(['app/layout/**/*.html'], ['extend'])
+})
 
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
