@@ -165,9 +165,12 @@ a {
   max-width: $containerWidth * .6;
 }
 .section {
-  padding: 1.5em 0;
+  padding: 8em 0;
 }
 
+.grey-bg {
+  background: #eaeaea;
+}
 
 
 
@@ -277,6 +280,7 @@ a {
 
 /* case study */
 .section-case-study {
+  padding: 1em 0 8em;
   h2 {
     color: #fff;
     margin-bottom: 1em;
@@ -362,48 +366,106 @@ a {
         display: none; 
       }
     }
+}
 
-  .circle {
-    display: none;
-    @media (min-width: 500px){
-      display: block;
-    }
-  }
+
+/* FEATURE MODULES
+------------------------- */
+.feature-module {
+  border-radius: 5px;
+  background: #fff;
 }
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: rgba(216,37,89,0.8);
-  text-align: center;
+
+.feature-module-top h4 {
+  margin-bottom: .5em;
+}
+.feature-module-top h4 span {
+  display: block;
+  font-size: .7em;
+/*   font-weight: normal; */
+  letter-spacing: 0.08em;
+  color: #9a9a9a;
+}
+
+.feature-module-top {
+  padding: 1.5em;
+}
+.feature-module-top p:last-child {
+  margin-bottom: 0;
+}
+.features-title {
+  margin-bottom: .4em;
+}
+.feature-module-bottom .everything-plus {
+  font-size: .85em;
+  color: rgba(255, 255, 255, 0.7);
+}
+.feature-module-bottom {
+  background: #666;
   color: #fff;
-  margin: 0 auto;
+  padding: 1.5em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   position: relative;
-  @media (min-width: 500px) {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 250px;
-    height: 250px;    
+}
+
+.feature-module.purple .feature-module-bottom {
+  background: #4353a4;
+}
+.feature-module.pink .feature-module-bottom {
+  background: #d82559;
+} 
+.feature-module-bottom ul {
+  padding: 0;
+  text-align: left;
+  font-size: .8em;
+  margin-left: 1.5em;  
+}
+.feature-module-bottom .starting-at {
+  margin: 22px 1em;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  font-size: 1.2em;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 16px;
+}
+.feature-module-bottom .spacer {
+  height: 45px;
+}
+.feature-module-bottom .button {
+  margin-bottom: 1.8em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  width: 70%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: all .4s ease;
+}
+.feature-module-bottom .button:hover {
+  border: 2px solid #fff;
+  background: none;
+}
+.feature-module-footer {
+  width: 100%;
+}
+@media (max-width: 36rem) {
+  .feature-module.purple .feature-module-bottom {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
-  span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  .feature-module.pink {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  } 
 }
-.circle-green {
-  background: rgba(85, 192, 165, 0.89);
-}
-.circle-purple {
-  background: rgba(67, 83, 164, 0.8);
-}
-.circle-col {
-  padding: 1em;
-}
-.decoration {
-  text-align: center;
-}
+
+
+
+
+
 
 
 
