@@ -3,28 +3,28 @@
 
 
 
-// $('.slider').slick({
-//   slidesToShow: 2,
-//   arrows: false,
-//   responsive: [
-//      {
-//       breakpoint: 1400,
-//       settings: {
-//         arrows: false,
-//         slidesToShow: 2
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         arrows: false,
-//         centerMode: true,
-//         centerPadding: '40px',
-//         slidesToShow: 1
-//       }
-//     }
-//   ]
-// });
+$('.slider').slick({
+  slidesToShow: 2,
+  arrows: false,
+  responsive: [
+     {
+      breakpoint: 1400,
+      settings: {
+        arrows: false,
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
 
 
   var equalheight = function(container){
