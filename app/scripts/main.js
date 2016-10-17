@@ -36,8 +36,8 @@
        topPosition = 0;
    $(container).each(function() {
 
+
      $el = $(this);
-     console.log($el)
      $($el).height('auto')
      var topPostion = $el.position().top;
 
@@ -63,16 +63,34 @@
 
 
 
-$(window).load(function() {
-  equalheight('.equalize');
-  equalheight('.equalize-2');
+
+
+$(document).ready(function() {
+  var maxHeight = 0;
+
+  $(".equalize").each(function(){
+     if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+  });
+
+  $(".equalize").height(maxHeight);
+
+  var maxHeight2 = 0;
+  $(".equalize-2").each(function(){
+     if ($(this).height() > maxHeight2) { maxHeight2 = $(this).height(); }
+  });
+
+  $(".equalize-2").height(maxHeight2);
 });
 
 
 $(window).resize(function(){
   equalheight('.equalize');
   equalheight('.equalize-2');
+
 });
+
+
+
 
 
 
